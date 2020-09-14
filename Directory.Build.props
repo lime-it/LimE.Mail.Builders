@@ -5,7 +5,7 @@
     <Description>Mail templating and utility library for aspent core services and applications.</Description>
     <Authors>Lim-e s.r.l.</Authors>
     <Company>Lim-e s.r.l.</Company>
-    <RepositoryUrlhttps://github.com/lime-it/LimE.Mail.BuildersRepositoryUrl>
+    <RepositoryUrl>https://github.com/lime-it/LimE.Mail.Builders</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIconUrl>https://assets.gitlab-static.net/uploads/-/system/group/avatar/6120722/logoStripe1.png?width=64</PackageIconUrl>
