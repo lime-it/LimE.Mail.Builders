@@ -9,8 +9,11 @@ jobs:
           name: Install dependencies
           command: dotnet restore
       - run:
+          name: Create package
+          command: dotnet pack --configuration Release
+      - run:
           name: Publish to nuget
-          command: dotnet nuget push LimE.Mail.Builders.*.nupkg -c Release --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json
+          command: dotnet nuget push LimE.Mail.Builders.*.nupkg --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json
 
 workflows:
   version: 2
