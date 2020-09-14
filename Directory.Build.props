@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Description>Mail templating and utility library for aspent core services and applications.</Description>
+    <Authors>Lim-e s.r.l.</Authors>
+    <Company>Lim-e s.r.l.</Company>
+    <RepositoryUrlhttps://github.com/lime-it/LimE.Mail.BuildersRepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIconUrl>https://assets.gitlab-static.net/uploads/-/system/group/avatar/6120722/logoStripe1.png?width=64</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/lime-it/LimE.Mail.Builders</PackageProjectUrl>
+    <PackageTags>Mail;Template;Mvc;WebApp</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>$(SolutionDir)stylecop.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.2.31" PrivateAssets="all" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" PrivateAssets="all" />
+    <AdditionalFiles Include="$(SolutionDir)stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+</Project>

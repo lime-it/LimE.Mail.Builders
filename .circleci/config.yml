@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  build: &build
+    docker:
+      - image: mcr.microsoft.com/dotnet/core/sdk:3.1
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: dotnet restore
+      - run:
+          name: Publish to nuget
+          command: dotnet nuget push LimE.Mail.Builders.*.nupkg -c Release --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json
+
+workflows:
+  version: 2
+  "LimE.Mail.Builders":
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - master
+                - next
+
