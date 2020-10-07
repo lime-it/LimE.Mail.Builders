@@ -1,1 +1,16 @@
-Hello to @(!ViewData.ContainsKey("name") ? "everybody" : ViewData["name"])!
+@using LimE.Mail.Builders
+@addTagHelper *, LimE.Mail.Builders
+
+@{
+    Layout = "~/Views/MailTemplates/_Layout.cshtml";
+    ViewData[Constants.BodyBgColor] = "#f7f7f7";
+}
+
+@section templateHtml {
+    Hello to <strong>@(!ViewData.ContainsKey("name") ? "everybody" : ViewData["name"])</strong>!
+}
+
+@section templateText {
+
+    Hello to @(!ViewData.ContainsKey("name") ? "everybody" : ViewData["name"])!
+}

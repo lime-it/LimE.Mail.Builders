@@ -1,0 +1,21 @@
+@using LimE.Mail.Builders
+@addTagHelper *, LimE.Mail.Builders
+
+@{
+    Layout = "~/Areas/LimE.Mail.Builders/Pages/Shared/_BuilderBase.cshtml";
+    ViewData[Constants.BodyBgColor] = "#f7f7f7";
+}
+
+@section templateHtml {
+    @{ IgnoreSection("templateText"); }
+    <ul>
+        <li>@RenderSection("templateHtml")</li>
+    </ul>
+}
+
+@section templateText {
+    @{ IgnoreSection("templateHtml"); }
+    +++
+    @RenderSection("templateText")
+    ===
+}
